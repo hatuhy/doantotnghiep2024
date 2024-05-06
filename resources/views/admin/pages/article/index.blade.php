@@ -13,7 +13,7 @@
             </h2>
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Quản lí bài viết</h3>
+              <h3 class="card-title">Quản lý bài viết</h3>
 
               <form action="" class="card-tools">
                 <div
@@ -36,7 +36,7 @@
               <table class="table table-hover text-nowrap">
                 <thead>
                     <tr>
-                        <th style="width: 20px;">#</th>
+                        <th style="width: 20px;">Mã bài</th>
                         <th style="width: 80px;">Ảnh đại diện</th>
                         <th style="width: 65%;">Thông tin</th>
                         <th style="width: 200px;">Ngày tạo</th>

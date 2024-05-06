@@ -45,20 +45,21 @@
                             <table class="table table-hover text-nowrap">
                                 <thead>
                                     <tr>
-                                        <th>#</th>
+                                        <th>STT</th>
                                         <th>Avatar</th>
                                         <th>Tên</th>
                                         <th>Email</th>
                                         <th>Phone</th>
                                         <th>Facebook</th>
                                         <th>Ngày tạo</th>
-                                        <th>#</th>
+                                        <th>Thao tác</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($users ?? [] as $item)
+                                    @foreach($users ?? [] as $key => $item)
                                     <tr>
-                                        <td scope="row">{{ $item->id }}</td>
+                                        <td>{{ ($users->currentPage() - 1)  + ($key + 1) }}</td>
+                                   
                                         <td scope="row">
                                             <img src="{{ pare_url_file($item->avatar) }}" style="width: 60px;height: 60px;border-radius: 50%" alt="">
                                         </td>
@@ -68,9 +69,10 @@
                                         <td scope="row">{{ $item->facebook ?? "Chưa cập nhật" }}</td>
                                         <td scope="row">{{ $item->created_at }}</td>
                                         <td scope="row">
-                                            <a href="{{ route('get_admin.user.view', $item->id) }}" class="text-info">View</a>
-                                            <a href="{{ route('get_admin.user.update', $item->id) }}">Update</a>
-                                            <a href="{{ route('get_admin.user.delete', $item->id) }}" class="text-danger">Delete</a>
+                                            <a href="{{ route('get_admin.user.view', $item->id) }}" class="btn btn-success btn-sm">Xem</a>
+                                            <a href="{{ route('get_admin.user.update', $item->id) }}" class="btn btn-info btn-sm">Sửa</a>
+                                            <a href="{{ route('get_admin.user.delete', $item->id) }}"  class="btn btn-danger btn-sm">Xóa</a>
+                                            
                                         </td>
                                     </tr>
                                     @endforeach

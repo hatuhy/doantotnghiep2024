@@ -36,7 +36,7 @@
                             <table class="table table-hover text-nowrap">
                                 <thead>
                                     <tr>
-                                        <th>Thao tác</th>
+                                        <th>STT</th>
                                         <th>Tên</th>
                                         <th>Email</th>
                                         <th>Phone</th>
@@ -46,9 +46,9 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($admins ?? [] as $item)
+                                    @foreach ($admins ?? [] as $key =>$item)
                                         <tr>
-                                            <td>{{ $item->id }}</td>
+                                            <td>{{ ($admins->currentPage() - 1)  + ($key + 1) }}</td>
                                             <td>{{ $item->name }}</td>
                                             <td>{{ $item->email }}</td>
                                             <td>{{ $item->phone }}</td>

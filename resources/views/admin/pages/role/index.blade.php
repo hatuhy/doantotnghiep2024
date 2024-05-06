@@ -14,7 +14,7 @@
             </h3>
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Quản lí phân quyền</h3>
+              <h3 class="card-title">Quản lý phân quyền</h3>
 
               <form class="card-tools">
                 <div
@@ -37,16 +37,16 @@
               <table class="table table-hover text-nowrap">
                 <thead >
                     <tr>
-                        <th>Thao tác</th>
+                        <th>STT</th>
                         <th>Tên</th>
                         <th>Ngày tạo</th>
                         <th class="text-center">thao tác</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse($roles ?? [] as $item)
+                    @forelse($roles ?? [] as $key => $item)
                     <tr>
-                        <td scope="row">{{ $item->id }}</td>
+                        <td>{{ ($roles->currentPage() - 1)  + ($key + 1) }}</td>
                         <td>{{ $item->name }}</td>
                         <td>{{ $item->created_at }}</td>
                         <td class="text-center">

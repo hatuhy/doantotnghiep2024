@@ -34,7 +34,7 @@
                             <table class="table table-hover text-nowrap">
                                 <thead>
                                 <tr>
-                                    <th style="width: 50px;">Code</th>
+                                    <th style="width: 50px;">Mã phòng</th>
                                     <th style="width: 100px;">Ảnh đại diện</th>
                                     <th style="width: 20%; max-width: 20%">Thông tin</th>
                                     <th>Danh mục</th>
@@ -105,7 +105,7 @@
                                                 <a href="{{ route('get_admin.room.delete', $item->id) }}"
                                                    class="text-danger"
                                                    style="font-size: 13px; text-decoration: none; font-weight: 500;">
-                                                    <i class="fa fa-trash"></i>Delete</a>
+                                                    <i class="fa fa-trash"></i>Xóa</a>
                                             </p>
                                             @if ($item->status == \App\Models\Room::STATUS_CANCEL)
                                                 <p style="margin-bottom: 2px; font-size: 12px;"><i

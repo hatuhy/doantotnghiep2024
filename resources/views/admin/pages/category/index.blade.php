@@ -59,7 +59,7 @@
                                                 <td>{{ $item->created_at }}</td>
                                                 <td>
                                                     <a href="{{ route('get_admin.category.update', $item->id) }}"
-                                                        class="btn btn-info btn-sm">sửa</a>
+                                                        class="btn btn-info btn-sm">Sửa</a>
                                                     <a href="{{ route('get_admin.category.delete', $item->id) }}"
                                                         class="btn btn-danger btn-sm">Xóa</a>
                                                 </td>
